@@ -49,7 +49,7 @@ class Stack():
 
     def __repr__(self):
         reply = []
-        for i in self.items:
+        for i in self.stack:
             reply.append(i.id)
         return str(reply)
 
