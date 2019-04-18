@@ -28,6 +28,30 @@ player = Player("Name", world.startingRoom)
 # FILL THIS IN
 traversalPath = ['n', 's']
 
+class Stack():
+    def __init__(self):
+        self.stack = []
+
+    def enqueue(self, value):
+        self.stack.append(value)
+
+    def dequeue(self):
+        if self.size() > 0:
+            return self.stack.pop()
+        else:
+            return None
+
+    def peek(self):
+        return self.stack[len(self.stack) - 1]
+
+    def size(self):
+        return len(self.stack)
+
+    def __repr__(self):
+        reply = []
+        for i in self.items:
+            reply.append(i.id)
+        return str(reply)
 
 
 
